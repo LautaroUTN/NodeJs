@@ -49,7 +49,7 @@ const router = app => {
                     html += "</html>";
                     response.write(html);
                     });
-            //}, 10000)
+            //}, 5000)
     });
 }
 
