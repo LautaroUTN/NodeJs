@@ -9,16 +9,10 @@ const { JSDOM } = jsdom;
 const { window } = new JSDOM();
 const { document } = (new JSDOM('')).window;
 global.document = document;
-
 var $ = jQuery = require('jquery')(window);
 
-
-//Esta parte del codigo consta del return donde nos muestra un resultado similar al pedido
-//en el ejercicio 1 a. Funciona dirigiendonos al dominio
-//localhost:8000/cotizacion/dolar
-//En vez de dolar puede ser:
-//euro, libra, sol, esterlina. Si queremos podemos agregar más monedas y ésto será automático
 const router = app => {
+    
     //A esta ruta no le agregué diseño a proposito, para ver el json limpio
     app.get('/cotizacion/:mon', (request, response) => {
         const mon = request.params.mon; //variable que utilizamos(dolar, euro, libra, real)
@@ -28,13 +22,15 @@ const router = app => {
         });
     });
 //Esta parte del ejercicio consta del return con diseño donde nos muestra 4 monedas(dolar, euro, real, libra)
+    var size = 0;
+    var html = "";
     app.get('/cotizacion', (request, response) => { 
-         var size = 0;
-         var html = "";
-         var cont = false;
-            pool.query('SELECT * FROM cotizacion', (error, result) => {
-                if (error) throw error;
-                if(cont == false){
+
+         //intento hacer consultas cada 5 segundos pero se desborda la pila
+         //while(ind<2){//le puse un limite para que no se exceda de consultas
+            //setTimeout(function() { 
+                pool.query('SELECT * FROM cotizacion', (error, result) => {
+                    if (error) throw error;
                     size = Object.keys(result).length;//obtiene el largo del array(cantidad de monedas)
                     html = "<html><head>";
                     html += "<script src='https://code.jquery.com/jquery-1.10.2.js'></script>";
@@ -52,19 +48,8 @@ const router = app => {
                     html += "</ul></div></body>";
                     html += "</html>";
                     response.write(html);
-                    cont=true;
-                }else{
-                    html = "";
-                    html += "<script language='JavaScript' type='text/javascript'>$('#utli').empty()</script>";
-                    response.write(html);
-                    for(var y = 0; y<size;y++){
-                        $("#precio"+y).text(result[y]["precio"]);
-                    }
-                    response.write(html);
-                }
-                
-        });
-
+                    });
+            //}, 10000)
     });
 }
 
