@@ -61,4 +61,4 @@ Para ejecutar ésta aplicación:
     
     Temas a aclarar (Leer luego de probar el proyecto)
     --No se termino con el refrescado de página en intervalos de 5 segundos, se intento hacer pero habia un error de desbordamiento de pila lo cual no me permitia continuar
-    --Si bien utilizar renderizados de html me parece una muy buena práctica no la utilicé para no requerir muchos archivos y armar tanta estructura de archivos para un ejercicio simple.
+    --Si bien utilizar renderizados de html me parece una muy buena práctica no la utilicé para no requerir tanta estructura de archivos para un ejercicio simple.
