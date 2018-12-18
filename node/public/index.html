@@ -1,0 +1,32 @@
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <script>
+        $.ajax({
+            url : "localhost:8000/cotizacion",
+            type : "GET",
+            dataType : 'json',
+            jsonpCallback: 'callback',
+            success: function(vec){
+
+                //Vamos a mostrar cotizacion de dolar a peso argentino
+                //var horario = new Date();
+                //var widget = Mostrar(vec);
+                console.log("el resultado total");
+                console.log("El array recibido es: "+vec);
+            }
+        });
+
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+    
+    <script>
+    </script>
+</html>
