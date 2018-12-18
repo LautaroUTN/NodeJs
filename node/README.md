@@ -6,9 +6,9 @@ Para ejecutar ésta aplicación:
     
         node app.js (lanzar servidor)
         
-    Recordar, DEJAR CORRER EL SERVIDOR Y EJECUTAR DESDE LA APLICACION POSTMAN O DESDE NAVEGADOR DE PREFERENCIA.
-    Desde Postman utilizamos la opcion "get" y ponemos en la url:
-    
+Recordar, DEJAR CORRER EL SERVIDOR Y EJECUTAR DESDE LA APLICACION POSTMAN O DESDE NAVEGADOR DE PREFERENCIA.
+Desde Postman utilizamos la opcion "get" y ponemos en la url:
+
     localhost:8000/cotizacion/dolar (caso del dolar)
     localhost:8000/cotizacion/euro (caso del euro)
     localhost:8000/cotizacion/real (caso del real)
@@ -19,8 +19,9 @@ Para ejecutar ésta aplicación:
         --real
         --libra   
         
-    Si miramos el resultado de postman será muy parecido a lo siguiente
-    Caso del dolar:
+   Si miramos el resultado de postman será muy parecido a lo siguiente
+   
+       Caso del dolar:
     
     {
         "moneda": "dolar",
@@ -47,20 +48,21 @@ Para ejecutar ésta aplicación:
             "precio": "48.03"
     }
     
-    Para el caso del navegador utilizamos el mismo proceso
+  Para el caso del navegador utilizamos el mismo proceso
     
-    -Importar base de datos "monedas" a mysql(en ésta experiencia use mysql con entorno gráfico phpmyadmin)
-    -Correr servidor de node js y mysql desde respectivo software con el siguiente comando:
-    
+   -Importar base de datos "monedas" a mysql(en ésta experiencia use mysql con entorno gráfico phpmyadmin)
+   -Correr servidor de node js y mysql desde respectivo software con el siguiente comando:
+   
         node app.js (lanzar servidor)
         
-    DEJAR CORRER EL SERVIDOR Y EJECUTAR DESDE NAVEGADOR DE PREFERENCIA.
+  DEJAR CORRER EL SERVIDOR Y EJECUTAR DESDE NAVEGADOR DE PREFERENCIA.
+  
     localhost:8000/cotizacion
     
-    y allí podremos apreciar el diseño en bootstrap y los datos de la Api
+   y allí podremos apreciar el diseño en bootstrap y los datos de la Api
     
     
-    Estructura de archivos: 
+ Estructura de archivos: 
     -data
               --config.js (Configuración de la conexión a la base de datos mysql)
               --monedas.sql (base de datos exportada)
@@ -75,5 +77,5 @@ Para ejecutar ésta aplicación:
     package-lock.json (paquete general de dependencias y paquetes de la aplicación)
     
     
-    Temas a aclarar (Leer luego de probar el proyecto)
-    --No se termino con el refrescado de página en intervalos de 5 segundos, se intento hacer pero habia un error de desbordamiento de pila lo cual no me permitia continuar
+  Temas a aclarar (Leer luego de probar el proyecto)
+   --No se termino con el refrescado de página en intervalos de 5 segundos, se intento hacer pero habia un error de desbordamiento de pila lo cual no me permitia continuar
