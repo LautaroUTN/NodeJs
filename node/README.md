@@ -1,7 +1,7 @@
 API RESTfull que retorna 4 cotizaciones (cantidad varia a registros de base de datos)
 
 Para ejecutar ésta aplicación:
-    -Importar base de datos "monedas" a mysql(en ésta experiencia use mysql con entorno gráfico phpmyadmin)
+    -Importar base de datos "monedas" a mysql
     -Correr servidor de node js y mysql desde respectivo software con el siguiente comando:
     
         node app.js (lanzar servidor)
