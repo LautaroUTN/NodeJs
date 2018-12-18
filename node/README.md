@@ -62,20 +62,21 @@ Desde Postman utilizamos la opcion "get" y ponemos en la url:
    y allí podremos apreciar el diseño en bootstrap y los datos de la Api
     
     
- Estructura de archivos: 
-    -data
-              --config.js (Configuración de la conexión a la base de datos mysql)
-              --monedas.sql (base de datos exportada)
-    -express-api
-              --node_modules (modulos instalados de express)
-              --package-lock.json (dependencias y configuraciones del proyecto)
-              --package.json(configuración y datos del proyecto)
-    -node_modules (paquetes instalados requeridos en la aplicación)
-    -routes
-              --routes.js (archivo de rutas y maquetado html)
-    README.md (archivo de lectura. Datos y procedimientos de la aplicación)
-    package-lock.json (paquete general de dependencias y paquetes de la aplicación)
-    
+   Estructura de archivos: 
+
+        -data
+                  --config.js (Configuración de la conexión a la base de datos mysql)
+                  --monedas.sql (base de datos exportada)
+        -express-api
+                  --node_modules (modulos instalados de express)
+                  --package-lock.json (dependencias y configuraciones del proyecto)
+                  --package.json(configuración y datos del proyecto)
+        -node_modules (paquetes instalados requeridos en la aplicación)
+        -routes
+                  --routes.js (archivo de rutas y maquetado html)
+        README.md (archivo de lectura. Datos y procedimientos de la aplicación)
+        package-lock.json (paquete general de dependencias y paquetes de la aplicación)
+
     
   Temas a aclarar (Leer luego de probar el proyecto)
    --No se termino con el refrescado de página en intervalos de 5 segundos, se intento hacer pero habia un error de desbordamiento de pila lo cual no me permitia continuar
